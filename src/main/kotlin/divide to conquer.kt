@@ -42,3 +42,12 @@ fun binnarySearchWReturnOnStart(a:IntArray, left: Int, right: Int, x: Int): Int 
         else binnarySearchRecursive(a, m - 1, right, x)
     }
 }
+fun maxOfArray(a: IntArray, left: Int, right: Int): Int { //recursive
+    if (left == right) return a[left]
+    else {
+        val mid = (left + right) / 2
+        val maxL = maxOfArray(a, left, mid) //máx da metade esq
+        val maxR = maxOfArray(a, mid + 1, right) //máx da metade dta
+        return if (maxL > maxR) maxL else maxR
+    }
+}
