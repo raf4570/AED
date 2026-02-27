@@ -12,9 +12,18 @@ fun enigma(n: Int): Int {
     return if (n<10)n
     else enigma(n/10)+(n%10)
 }
+fun enigma2(n: Int): Int {
+    var res = 0
+    var n = n
+    while(n>0){
+        res += n%10
+        n /= 10
+    }
+    return res
+}
+
 fun misterioso(n: Int): Int {
     return if(n==0) 2 else misterioso(n-1)*2
-
 }
 fun mistrio(n: Int): Int {
     var res =2
@@ -22,7 +31,4 @@ fun mistrio(n: Int): Int {
         res*=(2)
     }
     return res
-}
-fun test():Boolean{
-    return true
 }
