@@ -1,7 +1,7 @@
-fun main(){
+/*fun main(){
     val res = mistrio(4)
     println(res)
-}
+}*/
 
 fun adivinha(n: Int): Int {
     return if(n == 1)  3
